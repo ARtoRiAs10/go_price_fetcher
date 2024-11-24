@@ -11,7 +11,7 @@ import (
 
 func main() {
 
-	client := client.New("http://localhost:3000")
+	client := client.New("http://localhost:3001")
 
 	price, err := client.FetchPrice(context.Background(), "ET")
 
@@ -21,7 +21,7 @@ func main() {
 
 	fmt.Printf("%+V\n", price)
 
-	return
+	
 	listenAddr := flag.String("listenaddr", ":3000", "listen address server")
 	flag.Parse()
 	svc := NewLloggingService(NewMetricService(&priceFetcher{}))

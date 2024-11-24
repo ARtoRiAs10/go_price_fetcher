@@ -1,6 +1,6 @@
-FROM golang:1.18-alphine
+FROM golang:1.18-alpine
 
-WORKDIR /app 
+WORKDIR /app
 
 COPY go.mod ./
 COPY go.sum ./
@@ -11,5 +11,5 @@ RUN go build -o /pricefetcher
 
 EXPOSE 3000
 
-CMD ["/price"]
+CMD ["pricefetcher"]
 
